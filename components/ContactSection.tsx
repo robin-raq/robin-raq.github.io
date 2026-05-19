@@ -1,5 +1,5 @@
 const GITHUB = "https://github.com/robin-raq";
-const LINKEDIN = "https://www.linkedin.com/in/raq-robinson";
+const LINKEDIN = "https://www.linkedin.com/in/robinsonraquel/";
 
 const linkClass =
   "text-term-bright underline decoration-green-800/60 hover:text-[var(--term-link-hover)]";

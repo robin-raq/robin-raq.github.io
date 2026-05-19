@@ -2,7 +2,7 @@ import Link from "next/link";
 import { PROFILE_AVATAR_SRC } from "@/lib/avatar";
 
 const GITHUB = "https://github.com/robin-raq";
-const LINKEDIN = "https://www.linkedin.com/in/raq-robinson";
+const LINKEDIN = "https://www.linkedin.com/in/robinsonraquel/";
 
 const linkClass =
   "mt-0.5 block text-term-bright underline decoration-green-800/60 underline-offset-2 hover:text-[var(--term-link-hover)]";
@@ -68,7 +68,7 @@ export function Sidebar() {
               rel="noopener noreferrer"
               className={`truncate ${linkClass}`}
             >
-              linkedin.com/in/raq-robinson
+              linkedin.com/in/robinsonraquel
             </a>
           </li>
           <li>

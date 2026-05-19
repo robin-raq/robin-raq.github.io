@@ -10,9 +10,9 @@ const jetbrainsMono = JetBrains_Mono({
   weight: ["400", "500", "600", "700"],
 });
 
-/** Canonical public URL — set NEXT_PUBLIC_SITE_URL in CI for GitHub Pages. */
+/** Canonical public URL — CI sets this; default is user-site root (see deploy workflow). */
 const siteUrl =
-  process.env.NEXT_PUBLIC_SITE_URL?.trim() || "https://raqdrobinson.com";
+  process.env.NEXT_PUBLIC_SITE_URL?.trim() || "https://robin-raq.github.io";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl.endsWith("/") ? siteUrl.slice(0, -1) : siteUrl),

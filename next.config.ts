@@ -1,8 +1,8 @@
 import type { NextConfig } from "next";
 
 /**
- * GitHub project pages live at https://<user>.github.io/<repo>/
- * Set BASE_PATH=/<repo> when building for that URL (CI sets this automatically).
+ * User site (https://robin-raq.github.io/) uses no base path — repo must be named robin-raq.github.io.
+ * Project site (https://user.github.io/repo/) needs BASE_PATH=/repo for that layout.
  * Omit BASE_PATH for local dev at http://localhost:3000/
  */
 const rawBase = process.env.BASE_PATH?.trim() ?? "";
