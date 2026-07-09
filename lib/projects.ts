@@ -163,30 +163,6 @@ export const workProjects: WorkProject[] = [
     liveUrl: "https://robin-raq.github.io/Dobl-frontend-/",
     repoUrl: "https://github.com/robin-raq/Dobl-frontend-",
   },
-  {
-    id: "hot-play",
-    title: "Hot Play",
-    tier: "portfolio",
-    groupLabel: "Earlier work",
-    summary:
-      "YouTube-integrated Slack-style app for sharing and discussing music by genre.",
-    stack: ["React", "Ruby on Rails"],
-    liveUrl: "https://www.loom.com/share/4d50e0e68b004e8aafd0ee955836fb5d",
-    liveLabel: "Watch demo",
-    repoUrl: "https://github.com/robin-raq/hot-play",
-  },
-  {
-    id: "nurture",
-    title: "Nurture Plant Shop",
-    tier: "portfolio",
-    groupLabel: "Earlier work",
-    summary:
-      "Single-page ecommerce experience for browsing and learning about houseplants.",
-    stack: ["React", "Ruby on Rails"],
-    liveUrl: "https://www.loom.com/share/a7f9d086ba9e4b0d916cc452b142e9cc",
-    liveLabel: "Watch demo",
-    repoUrl: "https://github.com/robin-raq/nurture-frontend",
-  },
 ];
 
 export function getOrderedProjects(): WorkProject[] {
