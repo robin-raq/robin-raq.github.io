@@ -95,7 +95,7 @@ export const workProjects: WorkProject[] = [
     tier: "professional",
     groupLabel: "MassMutual | Fullstack Developer",
     summary:
-      "Led full overhaul of public-facing financial calculators: React + TypeScript, reusable components, REST APIs, WCAG 2.1 AA, CI/CD, and automated testing for customer-facing tools at scale.",
+      "Supported full overhaul of public-facing financial calculators: React + TypeScript, reusable components, REST APIs, WCAG 2.1 AA, CI/CD, and automated testing for customer-facing tools at scale.",
     stack: [
       "React",
       "TypeScript",
