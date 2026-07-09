@@ -4,7 +4,8 @@ import { PageHeader } from "@/components/PageHeader";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Systems-minded engineer — Industrial Engineering background, React, Next.js, TypeScript, AI/RAG, and socially responsible tech.",
+    "Systems-minded engineer — Industrial Engineering background, five-plus years shipping production software across React, Next.js, TypeScript, Python, AI/RAG systems, and socially responsible tech.",
+  alternates: { canonical: "/about/" },
 };
 
 export default function AboutPage() {
@@ -47,7 +48,7 @@ export default function AboutPage() {
             href="https://outintech.com/digital-corps/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-term-bright underline decoration-green-800/60 hover:text-[var(--term-link-hover)]"
+            className="text-term-bright underline decoration-[var(--term-teal)]/60 hover:text-[var(--term-link-hover)]"
           >
             Out in Tech Digital Corps
           </a>

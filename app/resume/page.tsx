@@ -4,7 +4,9 @@ import { publicPath } from "@/lib/publicPath";
 
 export const metadata: Metadata = {
   title: "Resume",
-  description: "Download or view Raq Robinson’s resume (PDF).",
+  description:
+    "Resume of Raq Robinson, Senior Full-Stack Engineer (AI/LLM systems) — view online or download the PDF.",
+  alternates: { canonical: "/resume/" },
 };
 
 export default function ResumePage() {
@@ -14,22 +16,22 @@ export default function ResumePage() {
     <>
       <PageHeader
         title="Resume"
-        description="PDF is the source of truth for applications."
+        description="AI-first development resume, updated 2026. PDF is the source of truth for applications."
       />
       <p className="font-mono text-[12px] text-term-body">
         <a
           href={resumePdf}
-          download
-          className="text-term-bright underline decoration-green-800/60 hover:text-[var(--term-link-hover)]"
+          download="Raq_Robinson_Resume.pdf"
+          className="text-term-bright underline decoration-[var(--term-teal)]/60 hover:text-[var(--term-link-hover)]"
         >
           [download] resume.pdf
         </a>
       </p>
-      <div className="mt-6 min-h-[65vh] w-full overflow-hidden rounded-sm border border-term bg-black/60">
+      <div className="mt-6 min-h-[65vh] w-full overflow-hidden rounded-[10px] border border-term bg-term-inset shadow-[var(--shadow-xs)]">
         <iframe
           title="Resume PDF"
           src={resumePdf}
-          className="h-[65vh] w-full bg-[#1a1a1a]"
+          className="h-[65vh] w-full"
         />
       </div>
     </>

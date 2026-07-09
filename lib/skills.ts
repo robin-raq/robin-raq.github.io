@@ -1,6 +1,22 @@
 /** Grouped skills aligned with resume — single source for the Skills section. */
 export const skillGroups = [
   {
+    // Leads the list to mirror the 2026 resume: AI-first development is
+    // the differentiator, so it's the first thing scanners see.
+    label: "AI-First Development",
+    items: [
+      "Claude Code & Cursor (daily)",
+      "Anthropic Claude & OpenAI APIs",
+      "LLM agents & tool orchestration",
+      "MCP",
+      "RAG",
+      "LangGraph",
+      "Langfuse / LangSmith",
+      "Evaluation & red teaming",
+      "AI-generated code validation",
+    ],
+  },
+  {
     label: "Languages",
     items: [
       "TypeScript",
@@ -29,6 +45,7 @@ export const skillGroups = [
     items: [
       "Node.js",
       "Express.js",
+      "FastAPI",
       "REST APIs",
       "WebSockets",
       "Redis",
