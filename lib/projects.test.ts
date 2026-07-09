@@ -27,12 +27,24 @@ describe("workProjects", () => {
 });
 
 describe("getOrderedProjects", () => {
-  it("orders tiers: fellowship, then professional, then portfolio", () => {
+  it("orders tiers: flagship, then fellowship, professional, portfolio", () => {
+    // Flagship (the two live shipped apps) leads: it is the strongest
+    // proof of work, so it renders first everywhere projects appear.
     const ordered = getOrderedProjects();
     const tiers = ordered.map((p) => p.tier);
     const firstIdx = (t: (typeof tiers)[number]) => tiers.indexOf(t);
-    expect(firstIdx("fellowship")).toBe(0);
+    expect(firstIdx("flagship")).toBe(0);
+    expect(firstIdx("fellowship")).toBeGreaterThan(firstIdx("flagship"));
     expect(firstIdx("professional")).toBeGreaterThan(firstIdx("fellowship"));
     expect(firstIdx("portfolio")).toBeGreaterThan(firstIdx("professional"));
+  });
+
+  it("flagship contains the two live apps with case studies", () => {
+    const flagship = getOrderedProjects().filter((p) => p.tier === "flagship");
+    expect(flagship.map((p) => p.id).sort()).toEqual(["oh-sheet", "tunechat"]);
+    for (const p of flagship) {
+      expect(p.caseStudyUrl).toMatch(/^\/projects\//);
+      expect(p.imageSrc).toBeTruthy();
+    }
   });
 });

@@ -1,6 +1,6 @@
 import type { ProjectTier, WorkProject } from "./project-types";
 
-const tierOrder: ProjectTier[] = ["fellowship", "professional", "portfolio"];
+const tierOrder: ProjectTier[] = ["flagship", "fellowship", "professional", "portfolio"];
 
 export const workProjects: WorkProject[] = [
   {
@@ -109,10 +109,13 @@ export const workProjects: WorkProject[] = [
   {
     id: "oh-sheet",
     title: "Oh Sheet",
-    tier: "portfolio",
-    groupLabel: "Independent product",
+    tier: "flagship",
+    groupLabel: "Live AI product",
     summary:
-      "YouTube-to-engraved piano sheet workflow: FastAPI orchestrator with Celery + Redis workers, yt-dlp + FFmpeg ingest, transcription handoff to TuneChat, proxied PDF / MusicXML / MIDI delivery, and a Redis cache for duplicate submissions. Single-container Railway monolith with a feature-flagged YouTube-only mode (custom domain pending).",
+      "Paste a YouTube link, get engraved piano sheet music. A five-stage AI pipeline (ingest → transcribe → arrange → humanize → engrave) built on FastAPI + Celery, with ML transcription, cover-search fallbacks, and PDF/MusicXML/MIDI delivery. Live on Railway; feeds its scores into TuneChat rooms.",
+    caseStudyUrl: "/projects/oh-sheet/",
+    imageSrc: "/projects/oh-sheet-home.png",
+    imageAlt: "Oh Sheet home screen: paste a YouTube link to get piano sheet music",
     stack: [
       "Python 3.12",
       "FastAPI",
@@ -129,10 +132,13 @@ export const workProjects: WorkProject[] = [
   {
     id: "tunechat",
     title: "TuneChat",
-    tier: "portfolio",
-    groupLabel: "Independent product",
+    tier: "flagship",
+    groupLabel: "Live AI product",
     summary:
-      "Real-time collaborative piano room + transcription engine: Socket.io multi-user note streaming (phase-aware legato/staccato wire protocol), Tone.js synthesis, OpenSheetMusicDisplay, and a tcalgo (PyTorch piano transcription) + MuseScore CLI pipeline turning uploads into engraved sheets. Powers Oh Sheet's transcription backend.",
+      "Multiplayer piano rooms in the browser: play together live over Socket.io (phase-aware legato wire protocol), read the same score via OpenSheetMusicDisplay, follow a piano-roll waterfall, and practice with variable-speed playback. Its PyTorch transcription engine also powers Oh Sheet.",
+    caseStudyUrl: "/projects/tunechat/",
+    imageSrc: "/projects/tunechat-room.png",
+    imageAlt: "TuneChat room with sheet music, chat, and a playable piano keyboard",
     stack: [
       "Node.js",
       "Express",

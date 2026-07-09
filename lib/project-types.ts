@@ -1,4 +1,8 @@
-export type ProjectTier = "fellowship" | "professional" | "portfolio";
+export type ProjectTier =
+  | "flagship"
+  | "fellowship"
+  | "professional"
+  | "portfolio";
 
 export type WorkProject = {
   id: string;
@@ -14,6 +18,8 @@ export type WorkProject = {
   liveLabel?: string;
   /** Source repository */
   repoUrl?: string;
+  /** Internal case-study route (e.g. /projects/oh-sheet/) */
+  caseStudyUrl?: string;
   /** Optional thumbnail for the card */
   imageSrc?: string;
   imageAlt?: string;
