@@ -5,7 +5,7 @@ const GITHUB = "https://github.com/robin-raq";
 const LINKEDIN = "https://www.linkedin.com/in/robinsonraquel/";
 
 const linkClass =
-  "mt-0.5 block text-term-bright underline decoration-green-800/60 underline-offset-2 hover:text-[var(--term-link-hover)]";
+  "mt-0.5 block text-term-bright underline decoration-[var(--term-teal)]/60 underline-offset-2 hover:text-[var(--term-link-hover)]";
 
 export function Sidebar() {
   return (

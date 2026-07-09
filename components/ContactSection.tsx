@@ -2,7 +2,7 @@ const GITHUB = "https://github.com/robin-raq";
 const LINKEDIN = "https://www.linkedin.com/in/robinsonraquel/";
 
 const linkClass =
-  "text-term-bright underline decoration-green-800/60 hover:text-[var(--term-link-hover)]";
+  "text-term-bright underline decoration-[var(--term-teal)]/60 hover:text-[var(--term-link-hover)]";
 
 type Props = {
   formAction?: string;
