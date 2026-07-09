@@ -8,6 +8,10 @@ export type WorkProject = {
   id: string;
   title: string;
   summary: string;
+  /** Extended body copy shown below summary on flagship cards */
+  description?: string;
+  /** Skills callout rendered as "What it shows: …" */
+  whatItShows?: string;
   stack: string[];
   tier: ProjectTier;
   /** Short label for section grouping */

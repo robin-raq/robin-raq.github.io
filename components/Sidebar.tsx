@@ -91,6 +91,18 @@ export function Sidebar() {
             </p>
             <p className="mt-0.5 text-term-fg">Brooklyn, NY</p>
           </li>
+          <li>
+            <p className="font-semibold uppercase tracking-wider text-term-dim">
+              :: resume
+            </p>
+            <a
+              href="/resume.pdf"
+              download="Raq_Robinson_Resume.pdf"
+              className={linkClass}
+            >
+              Download PDF
+            </a>
+          </li>
         </ul>
       </div>
     </aside>

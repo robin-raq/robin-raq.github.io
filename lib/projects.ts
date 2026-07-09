@@ -9,7 +9,11 @@ export const workProjects: WorkProject[] = [
     tier: "fellowship",
     groupLabel: "GauntletAI | AI Engineering Fellow",
     summary:
-      "Production audit and optimization of the U.S. Department of the Treasury’s open-source project management tool: TypeScript monorepo, API performance (k6), PostgreSQL query tuning, bundle efficiency, and accessibility.",
+      "Performance and accessibility audit of a U.S. Treasury open-source project management tool.",
+    description:
+      "Audited and improved a TypeScript monorepo: k6 API load testing, PostgreSQL query tuning, Vite bundle analysis, WebSocket stress testing, and WCAG 2.1 AA accessibility remediation across a React frontend.",
+    whatItShows:
+      "performance auditing, query optimization, bundle analysis, load testing, accessibility remediation, senior engineering judgment",
     stack: [
       "TypeScript",
       "React",
@@ -32,7 +36,11 @@ export const workProjects: WorkProject[] = [
     tier: "fellowship",
     groupLabel: "GauntletAI | AI Engineering Fellow",
     summary:
-      "RAG pipeline over legacy COBOL/Fortran: syntax-aware chunking, embeddings, Pinecone vector search, retrieval with reranking, and a public query UI with file/line references.",
+      "RAG pipeline that makes COBOL and Fortran codebases queryable in plain English.",
+    description:
+      "LegacyLens chunks legacy source files with syntax awareness, generates embeddings, stores them in Pinecone, retrieves with reranking, and returns answers with file and line references through a public query UI.",
+    whatItShows:
+      "RAG pipeline design, vector search, retrieval reranking, domain-specific chunking, FastAPI deployment",
     stack: [
       "Python",
       "Pinecone",
@@ -49,7 +57,11 @@ export const workProjects: WorkProject[] = [
     tier: "fellowship",
     groupLabel: "GauntletAI | AI Engineering Fellow",
     summary:
-      "Production-oriented domain agent with tool registry, orchestration, verification, conversation memory, evaluation suite, and observability (tracing, latency, token usage).",
+      "A production-oriented AI agent with tool calling, structured orchestration, and an eval suite.",
+    description:
+      "AgentForge implements a clinical domain agent with a typed tool registry, multi-step orchestration, response verification, conversation memory, and an adversarial evaluation suite. Instrumented for latency, cost, and error tracking across each agent call.",
+    whatItShows:
+      "tool orchestration, evaluation-driven development, cost and latency tracing, structured output validation, production agent design",
     stack: [
       "TypeScript",
       "Node.js",
@@ -66,7 +78,11 @@ export const workProjects: WorkProject[] = [
     tier: "fellowship",
     groupLabel: "GauntletAI | AI Engineering Fellow",
     summary:
-      "Real-time collaborative whiteboard with infinite pan/zoom, shapes, WebSockets multiplayer, and an AI board agent driven by natural language commands.",
+      "Real-time collaborative whiteboard with multiplayer state and an AI agent that responds to natural language.",
+    description:
+      "CollabBoard supports infinite pan/zoom canvas, shape primitives, and live multiplayer via WebSockets. An AI board agent interprets natural language commands to create and move elements on the canvas.",
+    whatItShows:
+      "real-time shared state, Canvas API, WebSockets multiplayer, AI agent integration, product interaction design",
     stack: [
       "TypeScript",
       "React",
@@ -83,7 +99,7 @@ export const workProjects: WorkProject[] = [
     tier: "fellowship",
     groupLabel: "GauntletAI | AI Engineering Fellow",
     summary:
-      "Real-time chat / session UI deployed on Railway (paired with the chatbox codebase).",
+      "Real-time chat session UI with persistent rooms, deployed on Railway.",
     stack: ["TypeScript", "React", "Node.js", "WebSockets"],
     liveUrl:
       "https://chatbridge-production.up.railway.app/session/96b8d04b-e031-4336-b444-645f0630afaf",
@@ -95,7 +111,11 @@ export const workProjects: WorkProject[] = [
     tier: "professional",
     groupLabel: "MassMutual | Fullstack Developer",
     summary:
-      "Supported full overhaul of public-facing financial calculators: React + TypeScript, reusable components, REST APIs, WCAG 2.1 AA, CI/CD, and automated testing for customer-facing tools at scale.",
+      "Supported the rebuild of MassMutual's public-facing financial calculators used by customers at scale.",
+    description:
+      "Contributed to a React and TypeScript overhaul: reusable component architecture, REST API integration, WCAG 2.1 AA accessibility, CI/CD pipelines, automated testing, and remediation of over 2,400 security vulnerabilities across the platform.",
+    whatItShows:
+      "production frontend development, accessibility compliance, component architecture, testing practices, security remediation",
     stack: [
       "React",
       "TypeScript",
@@ -111,8 +131,11 @@ export const workProjects: WorkProject[] = [
     title: "Oh Sheet",
     tier: "flagship",
     groupLabel: "Live AI product",
-    summary:
-      "Paste a YouTube link, get engraved piano sheet music. A five-stage AI pipeline (ingest → transcribe → arrange → humanize → engrave) built on FastAPI + Celery, with ML transcription, cover-search fallbacks, and PDF/MusicXML/MIDI delivery. Live on Railway; feeds its scores into TuneChat rooms.",
+    summary: "Paste a YouTube link and get engraved piano sheet music.",
+    description:
+      "Oh Sheet runs a five stage pipeline that pulls audio, transcribes it, arranges it for piano, and exports PDF, MusicXML, and MIDI files. Built with FastAPI, Celery, Redis, Docker, Railway, and ML transcription tools.",
+    whatItShows:
+      "AI pipeline design, async processing, external API integration, fallback handling, and production deployment.",
     caseStudyUrl: "/projects/oh-sheet/",
     imageSrc: "/projects/oh-sheet-home.png",
     imageAlt: "Oh Sheet home screen: paste a YouTube link to get piano sheet music",
@@ -134,8 +157,11 @@ export const workProjects: WorkProject[] = [
     title: "TuneChat",
     tier: "flagship",
     groupLabel: "Live AI product",
-    summary:
-      "Multiplayer piano rooms in the browser: play together live over Socket.io (phase-aware legato wire protocol), read the same score via OpenSheetMusicDisplay, follow a piano-roll waterfall, and practice with variable-speed playback. Its PyTorch transcription engine also powers Oh Sheet.",
+    summary: "TuneChat is a multiplayer piano room in the browser.",
+    description:
+      "Players can join a shared room, view the same score, practice with a virtual piano, and stay synced through Socket.io. Built with Node, Express, Socket.io, Tone.js, OpenSheetMusicDisplay, and vanilla JavaScript.",
+    whatItShows:
+      "real time collaboration, shared state, browser audio interaction, music notation rendering, and product focused UI.",
     caseStudyUrl: "/projects/tunechat/",
     imageSrc: "/projects/tunechat-room.png",
     imageAlt: "TuneChat room with sheet music, chat, and a playable piano keyboard",

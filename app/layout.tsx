@@ -29,9 +29,9 @@ const fraunces = Fraunces({
 const siteUrl =
   process.env.NEXT_PUBLIC_SITE_URL?.trim() || "https://robin-raq.github.io";
 
-const positioning = "Raq Robinson — Applied AI Software Engineer";
+const positioning = "Raq Robinson | Applied AI Software Engineer";
 const siteDescription =
-  "Applied AI software engineer building AI-powered products end to end — LLM agents, RAG pipelines, real-time collaboration, React/TypeScript, Python, and Node.js. Based in Brooklyn, NY.";
+  "Applied AI software engineer in Brooklyn, NY. I build shipped AI products using LLM systems, audio ML pipelines, real-time collaboration, React, TypeScript, Python, and Node.js.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl.endsWith("/") ? siteUrl.slice(0, -1) : siteUrl),
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
         url: "/og.png",
         width: 1200,
         height: 630,
-        alt: "Raq Robinson — Applied AI Software Engineer",
+        alt: "Raq Robinson, Applied AI Software Engineer",
       },
     ],
   },
@@ -135,7 +135,7 @@ export default function RootLayout({
                 ●
               </span>
               <span className="term-glow font-semibold tracking-[0.2em]">
-                PORTFOLIO.EXE — FULLSTACK.EXPLORER
+                PORTFOLIO.EXE :: FULLSTACK.EXPLORER
               </span>
             </div>
             <pre
@@ -146,7 +146,7 @@ export default function RootLayout({
             </pre>
             <div className="border-b border-term bg-term-bg px-3 py-2">
               <p className="mb-2 text-[10px] uppercase tracking-widest text-term-dim opacity-80">
-                SYSTEM READY — ROUTES INDEXED — STATIC EXPORT ONLINE
+                SYSTEM READY | ROUTES INDEXED | STATIC EXPORT ONLINE
               </p>
               <MainNav />
             </div>

@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Oh Sheet — AI Sheet Music from Any Song",
+  title: "Oh Sheet: AI Sheet Music from Any Song",
   description:
-    "Case study: Oh Sheet turns a YouTube link or audio upload into engraved piano sheet music with a five-stage AI pipeline — FastAPI, Celery, ML transcription, and MusicXML/PDF engraving. Built and shipped by Raq Robinson.",
+    "Case study: Oh Sheet turns a YouTube link or audio upload into engraved piano sheet music using a five-stage AI pipeline. FastAPI, Celery, ML transcription, and MusicXML/PDF engraving. Built and shipped by Raq Robinson.",
   alternates: { canonical: "/projects/oh-sheet/" },
   openGraph: {
-    title: "Oh Sheet — AI Sheet Music from Any Song",
+    title: "Oh Sheet: AI Sheet Music from Any Song",
     description:
       "Paste a YouTube link, get engraved piano sheet music. A five-stage AI pipeline case study.",
     images: [{ url: "/projects/oh-sheet-home.png", width: 1200, height: 800 }],
@@ -45,7 +45,7 @@ const stages = [
   {
     name: "Arrange",
     detail:
-      "Note events become a two-hand piano arrangement — voice splitting, register mapping, and density control tuned by an evaluation suite.",
+      "Note events become a two-hand piano arrangement: voice splitting, register mapping, and density control tuned by an evaluation suite.",
   },
   {
     name: "Humanize",
@@ -80,7 +80,7 @@ export default function OhSheetCaseStudy() {
           $ open --case-study=oh-sheet
         </p>
         <h1 className="term-glow text-2xl font-bold text-term-bright sm:text-3xl">
-          Oh Sheet — AI sheet music from any song
+          Oh Sheet: AI sheet music from any song
         </h1>
         <p className="mt-3 max-w-2xl text-[14px] leading-relaxed text-term-body">
           Paste a YouTube link or upload audio; get playable, engraved piano
@@ -160,7 +160,7 @@ export default function OhSheetCaseStudy() {
           </li>
           <li>
             <strong className="text-term-bright">Resilience:</strong> silent-
-            failure contracts at every ingest boundary — cover-search misses,
+            failure contracts at every ingest boundary: cover-search misses,
             bot-checked downloads, and over-long videos degrade to clear user
             errors instead of hung jobs.
           </li>
@@ -176,8 +176,51 @@ export default function OhSheetCaseStudy() {
             <Link href="/projects/tunechat/" className="text-term-teal underline">
               TuneChat
             </Link>{" "}
-            rooms, where the same score becomes a multiplayer practice session
-            — both apps share the &ldquo;Warm Vinyl&rdquo; design system.
+            rooms, where the same score becomes a multiplayer practice session.
+            Both apps share the &ldquo;Warm Vinyl&rdquo; design system.
+          </li>
+        </ul>
+      </section>
+
+      <section className="mb-8">
+        <h2 className="term-glow mb-3 text-lg font-semibold text-term-bright">
+          Testing and evals
+        </h2>
+        <ul className="max-w-2xl list-disc space-y-2 pl-5 text-[13px] leading-relaxed text-term-body">
+          <li>
+            An evaluation suite runs against a fixed set of reference songs to gate arrangement quality in CI -- a failing eval blocks the deploy.
+          </li>
+          <li>
+            Each ingest boundary is tested for its failure modes: cover miss, bot-challenged download, over-long video, and malformed audio input.
+          </li>
+          <li>
+            Pydantic contracts enforce the inter-stage data shape so type errors surface at service boundaries instead of corrupting output downstream.
+          </li>
+        </ul>
+      </section>
+
+      <section className="mb-8">
+        <h2 className="term-glow mb-3 text-lg font-semibold text-term-bright">
+          Tradeoffs
+        </h2>
+        <p className="max-w-2xl text-[13px] leading-relaxed text-term-body">
+          I deployed Oh Sheet as a single-container Railway monolith. That made the initial deployment fast and the system easy to operate solo, with one surface for logs, restarts, and environment configuration. The cost is that workers, web, and storage all share the same process boundary. If job throughput grew significantly, splitting those concerns into dedicated services would be the right next step.
+        </p>
+      </section>
+
+      <section className="mb-8">
+        <h2 className="term-glow mb-3 text-lg font-semibold text-term-bright">
+          What I would improve next
+        </h2>
+        <ul className="max-w-2xl list-disc space-y-2 pl-5 text-[13px] leading-relaxed text-term-body">
+          <li>
+            Separate worker processes from the web server to allow horizontal scaling of the transcription and arrangement stages independently.
+          </li>
+          <li>
+            Add a job queue depth monitor and rate limiter at the HTTP boundary so the worker pool does not fall behind during traffic spikes.
+          </li>
+          <li>
+            Expand the evaluation suite to cover more genres. Current coverage is strongest on popular Western pop and piano ballads.
           </li>
         </ul>
       </section>

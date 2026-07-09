@@ -104,15 +104,7 @@ export function ContactSection({ formAction }: Props) {
             [EXEC] Send
           </button>
         </form>
-      ) : (
-        <p className="mt-4 text-[12px] text-term-dim">
-          Form endpoint not set. Export{" "}
-          <code className="rounded border border-term bg-term-bg px-1.5 py-0.5 text-[10px] text-term-fg">
-            NEXT_PUBLIC_CONTACT_FORM_ACTION
-          </code>{" "}
-          to enable stdin.
-        </p>
-      )}
+      ) : null}
     </section>
   );
 }

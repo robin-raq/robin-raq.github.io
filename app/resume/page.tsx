@@ -5,7 +5,7 @@ import { publicPath } from "@/lib/publicPath";
 export const metadata: Metadata = {
   title: "Resume",
   description:
-    "Resume of Raq Robinson, Applied AI Software Engineer — view online or download the PDF.",
+    "Resume of Raq Robinson, Applied AI Software Engineer. View online or download the PDF.",
   alternates: { canonical: "/resume/" },
 };
 
@@ -51,14 +51,14 @@ export default function ResumePage() {
         {/* eslint-disable-next-line @next/next/no-img-element -- static export */}
         <img
           src={publicPath("/resume-preview.png")}
-          alt="Resume preview, page 1 of 2: Raq Robinson — summary, technical skills, and professional experience"
+          alt="Resume preview, page 1 of 2: Raq Robinson, summary, technical skills, and professional experience"
           width={1082}
           height={1400}
           className="w-full"
         />
       </a>
       <p className="mt-2 font-mono text-[11px] text-term-dim">
-        Page 1 of 2 — open the PDF for the full document.
+        Page 1 of 2. Open the PDF for the full document.
       </p>
     </>
   );

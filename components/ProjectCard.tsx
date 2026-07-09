@@ -30,6 +30,19 @@ export function ProjectCard({ project }: Props) {
       <p className="mt-2 text-[13px] leading-relaxed text-term-body">
         {project.summary}
       </p>
+      {project.description ? (
+        <p className="mt-2 text-[13px] leading-relaxed text-term-body">
+          {project.description}
+        </p>
+      ) : null}
+      {project.whatItShows ? (
+        <p className="mt-3 text-[12px] leading-relaxed text-term-dim">
+          <span className="font-mono text-[10px] uppercase tracking-wide text-term-teal">
+            What it shows:
+          </span>{" "}
+          {project.whatItShows}
+        </p>
+      ) : null}
       {hasLinks ? (
         <div className="mt-3 flex flex-wrap gap-2">
           {project.caseStudyUrl ? (

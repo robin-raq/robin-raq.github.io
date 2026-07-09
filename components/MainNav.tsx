@@ -4,6 +4,11 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { primaryNav } from "@/lib/nav";
 
+// Normalize path for active-state comparison: trailingSlash:true means
+// usePathname() returns "/about/" but nav hrefs are "/about".
+const normalize = (p: string) =>
+  p === "/" ? "/" : p.replace(/\/?$/, "/");
+
 export function MainNav() {
   const pathname = usePathname();
 
@@ -14,7 +19,7 @@ export function MainNav() {
     >
       <span className="mr-1 text-term-dim">&gt;</span>
       {primaryNav.map((item) => {
-        const active = pathname === item.href;
+        const active = normalize(pathname) === normalize(item.href);
         return (
           <Link
             key={item.href}

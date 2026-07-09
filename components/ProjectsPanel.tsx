@@ -7,6 +7,7 @@ import { getOrderedProjects } from "@/lib/projects";
 
 const filters: { id: "all" | ProjectTier; label: string }[] = [
   { id: "all", label: "All" },
+  { id: "flagship", label: "Flagship" },
   { id: "fellowship", label: "Fellowship" },
   { id: "professional", label: "Professional" },
   { id: "portfolio", label: "Portfolio" },
