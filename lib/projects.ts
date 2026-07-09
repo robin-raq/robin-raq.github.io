@@ -4,6 +4,35 @@ const tierOrder: ProjectTier[] = ["flagship", "fellowship", "professional", "por
 
 export const workProjects: WorkProject[] = [
   {
+    id: "nerdy-sales-agent",
+    title: "Nerdy Sales Agent",
+    tier: "fellowship",
+    groupLabel: "GauntletAI | AI Engineering Fellow",
+    summary:
+      "Autonomous voice sales agent that qualifies inbound tutoring calls and quotes pricing without ever inventing a discount to close the sale.",
+    description:
+      "Built for Nerdy/Varsity Tutors as a GauntletAI hiring-partner project. A five-phase state machine gates every close behind five required qualifying fields, so the agent cannot talk its way into a sale it has not earned. Tested against 10 adversarial caller personas with a judge-scored eval loop that promotes or retires each prompt version based on real conversion and disqualification accuracy.",
+    whatItShows:
+      "voice agent orchestration, state-machine guardrails against AI overselling, adversarial eval design, cost-optimized model routing, production deployment",
+    caseStudyUrl: "/projects/nerdy-sales-agent/",
+    imageSrc: "/projects/nerdy-sales-agent.png",
+    imageAlt:
+      "Nerdy Sales Agent demo page showing the Talk to Alex voice interface and live evaluation dashboard with 35% conversion rate and 80.9% disqualification accuracy",
+    stack: [
+      "TypeScript",
+      "Vapi",
+      "GPT-4o",
+      "DeepSeek-Chat",
+      "Claude Haiku 4.5",
+      "State Machine",
+      "Adversarial Eval",
+      "Railway",
+    ],
+    liveUrl: "https://web-production-092d32.up.railway.app/demo",
+    liveLabel: "Live demo",
+    repoUrl: "https://github.com/robin-raq/nerdy-sales-agent",
+  },
+  {
     id: "shipshape",
     title: "ShipShape",
     tier: "fellowship",

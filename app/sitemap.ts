@@ -15,6 +15,7 @@ const routes: Array<{ path: string; priority: number }> = [
   { path: "/projects/", priority: 0.9 },
   { path: "/projects/oh-sheet/", priority: 0.9 },
   { path: "/projects/tunechat/", priority: 0.9 },
+  { path: "/projects/nerdy-sales-agent/", priority: 0.9 },
   { path: "/about/", priority: 0.7 },
   { path: "/skills/", priority: 0.6 },
   { path: "/resume/", priority: 0.6 },
