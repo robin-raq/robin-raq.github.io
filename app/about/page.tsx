@@ -4,7 +4,7 @@ import { PageHeader } from "@/components/PageHeader";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Systems-minded engineer — Industrial Engineering background, five-plus years shipping production software across React, Next.js, TypeScript, Python, AI/RAG systems, and socially responsible tech.",
+    "Senior full stack and applied AI engineer — five-plus years of production software across financial services, healthcare, government, and enterprise. React, TypeScript, Node.js, Python, AI systems.",
   alternates: { canonical: "/about/" },
 };
 
@@ -13,52 +13,49 @@ export default function AboutPage() {
     <>
       <PageHeader
         title="About me"
-        description="Systems-minded software engineer — technology that is well-engineered and socially responsible."
+        description="Senior full stack and applied AI engineer — systems thinking from business problem to measurable results."
       />
       <div className="max-w-2xl space-y-4 text-[13px] leading-relaxed text-term-body">
         <p>
-          I&apos;m a systems-minded software engineer focused on building
-          technology that is both well-engineered and socially responsible. With
-          a background in Industrial Engineering and ~5 years of experience
-          across frontend and full stack development, I care deeply about
-          building performant, maintainable, accessible systems that create
-          meaningful real-world impact.
+          Senior full stack and applied AI engineer with more than five years
+          of experience building production software across financial
+          services, healthcare, government, and enterprise environments. I
+          combine deep React and TypeScript expertise with backend development
+          in Node.js and Python, API design, relational data systems,
+          automated testing, cloud delivery, and production reliability.
         </p>
         <p>
-          My work spans everything from enterprise financial platforms and
-          scalable frontend systems to AI-powered applications, RAG pipelines,
-          and agentic workflows. Technically, I specialize in React, Next.js,
-          TypeScript, data visualization, and accessibility, while also
-          enjoying backend and infrastructure work across Node.js, Ruby on
-          Rails, Python, AWS, and CI/CD systems.
+          At MassMutual, I delivered customer facing financial applications
+          used at scale, led technical implementation across product and
+          design teams, contributed to a zero downtime platform
+          modernization, improved development velocity through reusable
+          component architecture, and helped remediate more than 2,400
+          security vulnerabilities. My MS in Industrial Engineering shapes how
+          I approach software: I look beyond an isolated feature to understand
+          the full workflow, identify bottlenecks, and design systems that
+          improve both the product and the way the organization operates.
         </p>
         <p>
-          What defines my approach is curiosity and interdisciplinarity.
-          I&apos;m drawn to exploratory environments where engineers collaborate
-          closely across technical and non-technical domains to solve ambiguous
-          problems thoughtfully. The work I&apos;m most proud of includes
-          contributing to civic technology that expanded voter access and
-          helping build systems designed with long-term reliability, usability,
-          and impact in mind.
+          Through the Gauntlet AI Fellowship, I have been shipping deployed AI
+          applications on intensive, weeklong delivery cycles. My work
+          includes agentic workflows, RAG systems, structured tool calling,
+          evaluation harnesses, adversarial testing, and observability for
+          latency, cost, reliability, and failure analysis. I use Claude Code,
+          Cursor, and AI coding agents daily while applying rigorous testing
+          and human review to the software they help produce.
         </p>
         <p>
-          Outside of engineering, I DJ and collaborate on community-focused
-          creative and technology projects. I&apos;m also part of the{" "}
-          <a
-            href="https://outintech.com/digital-corps/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-term-bright underline decoration-[var(--term-teal)]/60 hover:text-[var(--term-link-hover)]"
-          >
-            Out in Tech Digital Corps
-          </a>
-          , contributing web products for LGBTQ+ nonprofits and activist
-          organizations.
+          I am strongest in ambiguous environments where I can move quickly
+          from a business problem to a technical plan, working software, and
+          measurable results. I communicate clearly with engineers, product
+          leaders, clients, and nontechnical stakeholders, and I bring high
+          ownership, curiosity, and energy to the teams I join.
         </p>
         <p>
-          Currently based in Brooklyn and especially interested in thoughtful
-          work at the intersection of AI, science, climate, healthcare, civic
-          technology, and creative tools.
+          Best suited for Senior Software Engineer, Forward Deployed
+          Engineer, Full Stack AI Engineer, Applied AI Engineer, or hands on
+          technical lead opportunities where strong execution, systems
+          thinking, and direct business impact matter.
         </p>
       </div>
     </>
