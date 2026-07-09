@@ -1,36 +1,102 @@
 import type { Metadata } from "next";
-import { JetBrains_Mono } from "next/font/google";
+import { Fraunces, JetBrains_Mono, Outfit } from "next/font/google";
 import { MainNav } from "@/components/MainNav";
 import { Sidebar } from "@/components/Sidebar";
 import "./globals.css";
 
+// Warm Vinyl type system (shared with Oh Sheet + TuneChat): Fraunces
+// for display, Outfit for UI/body, JetBrains Mono kept for the
+// terminal-flavored labels and chips.
 const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
   variable: "--font-mono",
   weight: ["400", "500", "600", "700"],
 });
 
+const outfit = Outfit({
+  subsets: ["latin"],
+  variable: "--font-body",
+  weight: ["300", "400", "500", "600", "700"],
+});
+
+const fraunces = Fraunces({
+  subsets: ["latin"],
+  variable: "--font-display",
+  weight: ["400", "600", "800"],
+});
+
 /** Canonical public URL — CI sets this; default is user-site root (see deploy workflow). */
 const siteUrl =
   process.env.NEXT_PUBLIC_SITE_URL?.trim() || "https://robin-raq.github.io";
 
+const positioning = "Raq Robinson — Senior Full-Stack Engineer · AI/LLM Systems";
+const siteDescription =
+  "Senior full-stack engineer building AI-powered products end to end — LLM agents, RAG pipelines, real-time collaboration, React/TypeScript, Python, and Node.js. Based in Brooklyn, NY.";
+
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl.endsWith("/") ? siteUrl.slice(0, -1) : siteUrl),
   title: {
-    default: "Raq Robinson | Senior Fullstack Engineer",
+    default: positioning,
     template: "%s | Raq Robinson",
   },
-  description:
-    "Fullstack engineer building secure, scalable, user-centered apps — React, TypeScript, Node.js, AI systems, and enterprise financial tools.",
+  description: siteDescription,
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
-    title: "Raq Robinson | Senior Fullstack Engineer",
-    description:
-      "Portfolio: GauntletAI fellowship work, MassMutual, and selected projects.",
+    title: positioning,
+    description: siteDescription,
     url: siteUrl,
     siteName: "Raq Robinson",
     locale: "en_US",
     type: "website",
+    images: [
+      {
+        url: "/og.png",
+        width: 1200,
+        height: 630,
+        alt: "Raq Robinson — Senior Full-Stack Engineer · AI/LLM Systems",
+      },
+    ],
   },
+  twitter: {
+    card: "summary_large_image",
+    title: positioning,
+    description: siteDescription,
+    images: ["/og.png"],
+  },
+};
+
+// Person schema: powers the knowledge-panel-style rich result for name
+// searches — the highest-intent query a job seeker's portfolio gets.
+const personJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Raq Robinson",
+  url: siteUrl,
+  jobTitle: "Senior Full-Stack Engineer",
+  description: siteDescription,
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Brooklyn",
+    addressRegion: "NY",
+    addressCountry: "US",
+  },
+  sameAs: [
+    "https://github.com/robin-raq",
+    "https://www.linkedin.com/in/robinsonraquel/",
+  ],
+  knowsAbout: [
+    "Full-stack development",
+    "AI agents and LLM systems",
+    "Retrieval-augmented generation (RAG)",
+    "React",
+    "TypeScript",
+    "Next.js",
+    "Node.js",
+    "Python",
+    "Real-time collaboration systems",
+  ],
 };
 
 export default function RootLayout({
@@ -41,10 +107,19 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${jetbrainsMono.variable} h-full font-mono antialiased`}
+      className={`${jetbrainsMono.variable} ${outfit.variable} ${fraunces.variable} h-full font-sans antialiased`}
       suppressHydrationWarning
     >
-      <body className="crt-scanlines relative min-h-screen bg-term-bg p-3 text-term-fg sm:p-6">
+      <body className="relative min-h-screen bg-term-bg p-3 text-term-fg sm:p-6">
+        <script
+          type="application/ld+json"
+          // Build-time-constant object (no user input). `<` is escaped
+          // so no string value can ever close the script tag early —
+          // the standard JSON-LD hardening from the Next.js docs.
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(personJsonLd).replace(/</g, "\\u003c"),
+          }}
+        />
         <a
           href="#main"
           className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[200] focus:rounded-sm focus:border focus:border-[var(--term-focus)] focus:bg-term-surface focus:px-3 focus:py-2 focus:text-term-bright focus:outline-none"

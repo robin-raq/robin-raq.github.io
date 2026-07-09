@@ -5,7 +5,8 @@ import { SkillsPanel } from "@/components/SkillsPanel";
 export const metadata: Metadata = {
   title: "Skills",
   description:
-    "Languages, frontend, backend, data & AI, DevOps, testing, and practices.",
+    "TypeScript, React, Next.js, Python, Node.js, LLM agents, RAG, vector search, WebSockets, PostgreSQL, Redis, Docker, CI/CD, and testing practices.",
+  alternates: { canonical: "/skills/" },
 };
 
 export default function SkillsPage() {

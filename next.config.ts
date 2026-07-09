@@ -10,6 +10,10 @@ const basePath = rawBase.replace(/\/$/, "");
 
 const nextConfig: NextConfig = {
   output: "export",
+  // Emit about/index.html instead of about.html: GitHub Pages then 301s
+  // /about → /about/, so both URL shapes resolve (previously /about/
+  // 404'd — a canonicalization split for crawlers and shared links).
+  trailingSlash: true,
   env: {
     NEXT_PUBLIC_BASE_PATH: basePath,
   },

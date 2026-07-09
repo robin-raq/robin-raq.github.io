@@ -5,7 +5,8 @@ import { ProjectsPanel } from "@/components/ProjectsPanel";
 export const metadata: Metadata = {
   title: "Projects",
   description:
-    "GauntletAI fellowship builds, MassMutual, and selected earlier work.",
+    "Shipped AI products: Oh Sheet (audio-to-sheet-music AI pipeline) and TuneChat (real-time collaborative music rooms), plus GauntletAI fellowship builds and MassMutual work.",
+  alternates: { canonical: "/projects/" },
 };
 
 export default function ProjectsPage() {

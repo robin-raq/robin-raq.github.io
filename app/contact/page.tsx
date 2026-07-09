@@ -4,7 +4,9 @@ import { PageHeader } from "@/components/PageHeader";
 
 export const metadata: Metadata = {
   title: "Contact",
-  description: "Get in touch via GitHub, LinkedIn, or the contact form.",
+  description:
+    "Contact Raq Robinson — Senior Full-Stack Engineer in Brooklyn, NY — via GitHub, LinkedIn, or the contact form.",
+  alternates: { canonical: "/contact/" },
 };
 
 export default function ContactPage() {
