@@ -29,9 +29,9 @@ const fraunces = Fraunces({
 const siteUrl =
   process.env.NEXT_PUBLIC_SITE_URL?.trim() || "https://robin-raq.github.io";
 
-const positioning = "Raq Robinson — Senior Full-Stack Engineer · AI/LLM Systems";
+const positioning = "Raq Robinson — Applied AI Software Engineer";
 const siteDescription =
-  "Senior full-stack engineer building AI-powered products end to end — LLM agents, RAG pipelines, real-time collaboration, React/TypeScript, Python, and Node.js. Based in Brooklyn, NY.";
+  "Applied AI software engineer building AI-powered products end to end — LLM agents, RAG pipelines, real-time collaboration, React/TypeScript, Python, and Node.js. Based in Brooklyn, NY.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl.endsWith("/") ? siteUrl.slice(0, -1) : siteUrl),
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
         url: "/og.png",
         width: 1200,
         height: 630,
-        alt: "Raq Robinson — Senior Full-Stack Engineer · AI/LLM Systems",
+        alt: "Raq Robinson — Applied AI Software Engineer",
       },
     ],
   },
@@ -74,7 +74,8 @@ const personJsonLd = {
   "@type": "Person",
   name: "Raq Robinson",
   url: siteUrl,
-  jobTitle: "Senior Full-Stack Engineer",
+  jobTitle: "Applied AI Software Engineer",
+  email: "mailto:raqrobinson.dev@gmail.com",
   description: siteDescription,
   address: {
     "@type": "PostalAddress",

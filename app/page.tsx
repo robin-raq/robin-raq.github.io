@@ -5,10 +5,10 @@ import { getOrderedProjects } from "@/lib/projects";
 
 export const metadata: Metadata = {
   // No page title: the homepage carries the site-wide positioning
-  // default ("Raq Robinson — Senior Full-Stack Engineer · AI/LLM
-  // Systems") instead of wasting the strongest title tag on "Home".
+  // default ("Raq Robinson — Applied AI Software Engineer")
+  // instead of wasting the strongest title tag on "Home".
   description:
-    "Senior full-stack engineer in Brooklyn building AI-powered products end to end — LLM agents, RAG pipelines, real-time collaboration, React/TypeScript, Python, Node.js.",
+    "Applied AI software engineer in Brooklyn building products end to end — LLM agents, RAG pipelines, real-time collaboration, React/TypeScript, Python, Node.js.",
   alternates: { canonical: "/" },
 };
 
@@ -25,7 +25,7 @@ export default function HomePage() {
           Raq Robinson
         </h1>
         <p className="mt-1 font-mono text-[12px] uppercase tracking-[0.14em] text-term-teal">
-          Senior Full-Stack Engineer · AI/LLM Systems
+          Applied AI Software Engineer
         </p>
         <p className="mt-4 max-w-xl text-[15px] leading-relaxed text-term-body">
           I build AI-powered products end to end — from LLM agents and audio ML

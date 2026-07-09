@@ -5,7 +5,7 @@ import { publicPath } from "@/lib/publicPath";
 export const metadata: Metadata = {
   title: "Resume",
   description:
-    "Resume of Raq Robinson, Senior Full-Stack Engineer (AI/LLM systems) — view online or download the PDF.",
+    "Resume of Raq Robinson, Applied AI Software Engineer — view online or download the PDF.",
   alternates: { canonical: "/resume/" },
 };
 

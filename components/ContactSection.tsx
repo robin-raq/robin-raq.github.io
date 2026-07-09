@@ -15,11 +15,17 @@ export function ContactSection({ formAction }: Props) {
   return (
     <section aria-label="Contact form" className="font-mono">
       <p className="max-w-2xl text-[13px] leading-relaxed text-term-body">
-        Prefer GitHub or LinkedIn for a first touch; use the form when it is
-        configured with your Formspree (or similar) endpoint.
+        Email is the fastest first touch; GitHub and LinkedIn work too. The
+        form is available when configured with a Formspree (or similar)
+        endpoint.
       </p>
 
       <ul className="mt-4 flex flex-wrap gap-4 text-[12px]">
+        <li>
+          <a href="mailto:raqrobinson.dev@gmail.com" className={linkClass}>
+            [raqrobinson.dev@gmail.com]
+          </a>
+        </li>
         <li>
           <a
             href={GITHUB}

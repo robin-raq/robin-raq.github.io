@@ -45,7 +45,7 @@ export function Sidebar() {
             Raq Robinson
           </p>
           <p className="mt-2 inline-block rounded border border-term bg-term-bg px-2 py-1 font-mono text-[10px] text-term-fg">
-            {"{ senior_fullstack_engineer }"}
+            {"{ applied_ai_software_engineer }"}
           </p>
         </div>
 
@@ -54,9 +54,10 @@ export function Sidebar() {
             <p className="font-semibold uppercase tracking-wider text-term-dim">
               :: email
             </p>
-            <Link href="/contact" className={linkClass}>
-              ./contact
-            </Link>
+            <a href="mailto:raqrobinson.dev@gmail.com" className={linkClass}>
+              raqrobinson.dev
+              <wbr />@gmail.com
+            </a>
           </li>
           <li>
             <p className="font-semibold uppercase tracking-wider text-term-dim">
